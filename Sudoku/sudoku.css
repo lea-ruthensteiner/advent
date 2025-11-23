@@ -1,0 +1,177 @@
+body {
+    font-family: Arial, sans-serif;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    color: #444;
+}
+
+#game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+#sudoku-grid {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    width: 90vw;
+    max-width: 540px;
+    /* Adjust max size as needed */
+    border: 3px solid #000;
+    background-color: #fff;
+}
+
+.tile {
+    /* This makes the tiles perfectly square */
+    aspect-ratio: 1 / 1;
+    border: 1px solid #ccc;
+    display: grid;
+    place-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    /* Prevents text selection */
+}
+
+/* Add thicker borders for the 3x3 boxes */
+.tile:nth-child(3n) {
+    border-right: 3px solid #000;
+}
+
+.tile:nth-child(9n) {
+    border-right: 1px solid #ccc;
+    /* Reset last column */
+}
+
+.tile:nth-child(n+19):nth-child(-n+27),
+.tile:nth-child(n+46):nth-child(-n+54) {
+    border-bottom: 3px solid #000;
+}
+
+/* Style for pre-filled ("given") tiles */
+.tile.given {
+    background-color: #eee;
+    cursor: not-allowed;
+    color: #555;
+}
+
+/* Style for the currently selected tile */
+.tile.selected {
+    background-color: #dbe4ff;
+    outline: 2px solid #4a69bd;
+    z-index: 10;
+}
+
+#symbol-palette {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 5px;
+    width: 90vw;
+    max-width: 540px;
+}
+
+.symbol {
+    aspect-ratio: 1 / 1;
+    border: 2px solid #aaa;
+    border-radius: 5px;
+    display: grid;
+    place-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.symbol:hover {
+    background-color: #e0e0e0;
+}
+
+#controls {
+    display: flex;
+    gap: 10px;
+}
+
+#delete-btn,
+#check-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#delete-btn {
+    background-color: #f44336;
+    /* Red */
+    color: white;
+}
+
+#check-btn {
+    background-color: #4CAF50;
+    /* Green */
+    color: white;
+}
+
+#message-area {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+
+/*
+================================================================
+==  TODO: ADD YOUR 9 SYMBOL IMAGES HERE                     ==
+================================================================
+
+Replace 'path/to/image1.png' with your actual image file paths.
+The `data-symbol` attribute is the identifier.
+*/
+
+/*
+.tile[data-symbol="1"],
+.symbol[data-symbol="1"] {
+    background-image: url('path/to/image1.png');
+    background-size: cover;
+    background-position: center;
+    color: transparent; 
+}
+
+.tile[data-symbol="2"],
+.symbol[data-symbol="2"] {
+    background-image: url('path/to/image2.png');
+    background-size: cover;
+    background-position: center;
+    color: transparent; 
+}
+
+.tile[data-symbol="3"],
+.symbol[data-symbol="3"] {
+    background-image: url('path/to/image3.png');
+    background-size: cover;
+    background-position: center;
+    color: transparent; 
+}
+*/
+
+/* ...and so on, for data-symbol="4" through "9" ... */
+
+/*
+.tile[data-symbol="9"],
+.symbol[data-symbol="9"] {
+    background-image: url('path/to/image9.png');
+    background-size: cover;
+    background-position: center;
+    color: transparent; 
+}
+*/
