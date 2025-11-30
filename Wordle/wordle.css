@@ -121,16 +121,16 @@ button.icon:focus-visible {
        and match the keyboard's inner padding so both align exactly */
     width: 90%;
     aspect-ratio: 5 / 6;
-    padding: 0 8px;
+    padding: 0 0px;
     box-sizing: border-box;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
 .tile {
     /* make each tile fill its grid cell and keep a 1:1 aspect ratio (square) */
     width: 100%;
     aspect-ratio: 1 / 1;
-    border: 4px solid var(--border2);
+    border: 2px solid var(--border2);
     border-radius: 5px;
     color: var(--text2);
     font-size: clamp(1rem, 8vw, 2.5rem);
@@ -201,7 +201,7 @@ button.icon:focus-visible {
     font-size: 1.1rem;
     border: none;
     padding: 0;
-    height: 58px;
+    height: 50px;
     border-radius: 4px;
     background-color: var(--border2);
     color: var(--text2);
@@ -249,7 +249,7 @@ a.icon { text-decoration: none; color: inherit; display: inline-flex; align-item
 @media (max-width: 360px) {
     :root { --menu-h: 48px; }
     .title { font-size: clamp(1.2rem, 9vw, 2.2rem); }
-    .content { padding: 16px; }
+    .content { padding: 0px; }
 }
 
 
