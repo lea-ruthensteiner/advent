@@ -58,7 +58,10 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: var(--gap);
+    padding-top: 0px;
+    padding-right: var(--gap);
+    padding-left: var(--gap);
+    padding-bottom: var(--gap);
 }
 
 .title {
@@ -81,21 +84,6 @@ button.icon:focus-visible {
     outline: 3px solid rgba(167, 130, 85, 0.35);
     outline-offset: 2px;
     border-radius: 8px;
-}
-
-/* Small adjustments for very narrow screens */
-@media (max-width: 360px) {
-    :root {
-        --menu-h: 48px;
-    }
-
-    .title {
-        font-size: clamp(1.2rem, 9vw, 2.2rem);
-    }
-
-    .content {
-        padding: 16px;
-    }
 }
 
 /* Game specific styles below */
@@ -251,5 +239,3 @@ a.icon { text-decoration: none; color: inherit; display: inline-flex; align-item
     .title { font-size: clamp(1.2rem, 9vw, 2.2rem); }
     .content { padding: 0px; }
 }
-
-
