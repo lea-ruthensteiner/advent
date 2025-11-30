@@ -105,7 +105,7 @@ button.icon:focus-visible {
     align-items: center;
     justify-content: center;
     width: 100%;
-    max-width: 500px;
+    max-width: 550px;
 }
 .hidden {
     display: none;
@@ -251,3 +251,4 @@ a.icon { text-decoration: none; color: inherit; display: inline-flex; align-item
     .title { font-size: clamp(1.2rem, 9vw, 2.2rem); }
     .content { padding: 16px; }
 }
+
